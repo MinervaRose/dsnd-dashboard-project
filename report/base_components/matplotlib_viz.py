@@ -44,13 +44,12 @@ class MatplotlibViz(BaseComponent):
     @matplotlib2fasthtml
     def build_component(self, entity_id, model):
         return self.visualization(entity_id, model)
-    
-    
+
     def visualization(self, entity_id, model):
         pass
 
     def set_axis_styling(self, ax, bordercolor='white', fontcolor='white'):
-        
+
         ax.title.set_color(fontcolor)
         ax.xaxis.label.set_color(fontcolor)
         ax.yaxis.label.set_color(fontcolor)
@@ -62,4 +61,3 @@ class MatplotlibViz(BaseComponent):
         for line in ax.get_lines():
             line.set_linewidth(4)
             line.set_linestyle('dashdot')
-
