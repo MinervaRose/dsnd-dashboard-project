@@ -1,5 +1,4 @@
 from .query_base import QueryBase
-from .sql_execution import QueryMixin
 
 # Create a subclass of QueryBase
 # called  `Team`
