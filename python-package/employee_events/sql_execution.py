@@ -48,7 +48,9 @@ def query(func):
         query_string = func(*args, **kwargs)
         with connect(db_path) as connection:
             cursor = connection.cursor()
-            result = cursor.execute(query_string).fetchall()
+            result = cursor.execute(
+                query_string
+            ).fetchall()
         return result
 
     return run_query
